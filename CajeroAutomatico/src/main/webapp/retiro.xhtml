@@ -1,0 +1,22 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="jakarta.faces.html"
+      xmlns:f="jakarta.faces.core"
+      xmlns:ui="jakarta.faces.facelets">
+    <h:head>
+        <title>Retiro de Efectivo</title>
+    </h:head>
+    <h:body>
+        <h2>Retirar Dinero</h2>
+        <h:form>
+            <h:panelGrid columns="2">
+                <h:outputLabel value="Monto a retirar:" />
+                <h:inputText value="#{cajeroBean.montoInput}" />
+                
+                <h:commandButton value="Confirmar Retiro" action="#{cajeroBean.procesarRetiro()}" />
+                <h:commandButton value="Volver al Menú" action="index" immediate="true" />
+            </h:panelGrid>
+            <br/>
+            <h:outputText value="#{cajeroBean.mensaje}" style="color: red;" />
+        </h:form>
+    </h:body>
+</html>

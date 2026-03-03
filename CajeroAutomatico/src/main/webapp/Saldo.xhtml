@@ -1,0 +1,22 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="jakarta.faces.html"
+      xmlns:f="jakarta.faces.core"
+      xmlns:ui="jakarta.faces.facelets">
+    <h:head>
+        <title>Consulta de Saldo</title>
+    </h:head>
+    <h:body>
+        <h2>Estado de Cuenta</h2>
+        <h:panelGrid columns="2">
+            <h:outputLabel value="Número de Cuenta:" />
+            <h:outputText value="#{cajeroBean.usuarioActual.numeroCuenta}" />
+            
+            <h:outputLabel value="Saldo Actual:" />
+            <h:outputText value="L. #{cajeroBean.usuarioActual.saldo}" />
+        </h:panelGrid>
+        <br/>
+        <h:form>
+            <h:commandButton value="Regresar al Menú" action="index" />
+        </h:form>
+    </h:body>
+</html>

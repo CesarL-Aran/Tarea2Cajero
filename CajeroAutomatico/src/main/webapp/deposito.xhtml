@@ -1,0 +1,22 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="jakarta.faces.html"
+      xmlns:f="jakarta.faces.core"
+      xmlns:ui="jakarta.faces.facelets">
+    <h:head>
+        <title>Depósitos</title>
+    </h:head>
+    <h:body>
+        <h2>Realizar Depósito</h2>
+        <h:form>
+            <h:panelGrid columns="2">
+                <h:outputLabel value="Monto a depositar:" />
+                <h:inputText value="#{cajeroBean.montoInput}" />
+                
+                <h:commandButton value="Depositar" action="#{cajeroBean.procesarDeposito()}" />
+                <h:commandButton value="Volver al Menú" action="index" immediate="true" />
+            </h:panelGrid>
+            <br/>
+            <h:outputText value="#{cajeroBean.mensaje}" style="color: green;" />
+        </h:form>
+    </h:body>
+</html>

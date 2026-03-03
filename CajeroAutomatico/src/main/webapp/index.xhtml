@@ -1,0 +1,19 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="jakarta.faces.html"
+      xmlns:f="jakarta.faces.core"
+      xmlns:ui="jakarta.faces.facelets">
+    <h:head>
+        <title>Cajero UTH - Menú</title>
+    </h:head>
+    <h:body>
+        <h1>Bienvenido al Cajero Automático</h1>
+        <h:form>
+            <h:panelGrid columns="1">
+                <h:commandButton value="Consultar Saldo" action="saldo" />
+                <h:commandButton value="Realizar Depósito" action="deposito" />
+                <h:commandButton value="Realizar Retiro" action="retiro" />
+                <h:commandButton value="Salir del Sistema" action="#{cajeroBean.logout()}" />
+            </h:panelGrid>
+        </h:form>
+    </h:body>
+</html>

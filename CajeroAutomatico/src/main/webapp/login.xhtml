@@ -1,0 +1,27 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="jakarta.faces.html"
+      xmlns:f="jakarta.faces.core">
+    
+    <h:head>
+        <title>Login - Cajero UTH</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            <div style="text-align: center; margin-top: 50px;">
+                <h2>Cajero Automático UTH</h2>
+                <h:panelGrid columns="2" style="margin: 0 auto;">
+                    <h:outputLabel value="Número de Cuenta:" />
+                    <h:inputText value="#{cajeroBean.cuentaBusqueda}" required="true" />
+
+                    <h:outputLabel value="PIN:" />
+                    <h:inputSecret value="#{cajeroBean.pinBusqueda}" required="true" />
+                </h:panelGrid>
+                
+                <br/>
+                <h:commandButton value="Ingresar" action="#{cajeroBean.login()}" />
+                <br/><br/>
+                <h:outputText value="#{cajeroBean.mensaje}" style="color: red;" />
+            </div>
+        </h:form>
+    </h:body>
+</html>
